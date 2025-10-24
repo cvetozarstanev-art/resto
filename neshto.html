@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cosmic Café</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffaf2;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2e294e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    #header-img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-bottom: 4px solid #ffd400;
+    }
+    nav {
+      background-color: #ffd400;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px 0;
+      font-weight: bold;
+    }
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    article {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #fff;
+      padding: 15px;
+      margin: 15px 0;
+    }
+    article img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    h2 {
+      border-bottom: 2px solid #2e294e;
+      padding-bottom: 5px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, textarea {
+      padding: 8px;
+      width: 100%;
+      max-width: 400px;
+    }
+    input[type="submit"] {
+      background-color: #2e294e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+      width: fit-content;
+    }
+    footer {
+      background-color: #2e294e;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img id="header-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Restaurant Header Image">
+    <h1>The Cosmic Café</h1>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#order-form">Order Form</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="menu">
+      <h2>Menu</h2>
+
+      <article>
+        <img src="https://images.unsplash.com/photo-1605478031384-3ec8c6b28f80" alt="Galaxy Burger">
+        <h3>Galaxy Burger</h3>
+        <p>A cosmic twist on the classic cheeseburger, topped with space sauce and stardust seasoning. <em>$12.99</em></p>
+      </article>
+
+      <article>
+        <img src="https://images.unsplash.com/photo-1617196037985-7d7a37bdbb02" alt="Meteor Fries">
+        <h3>Meteor Fries</h3>
+        <p>Crispy golden fries sprinkled with cosmic salt and served with our nebula dip. <em>$5.49</em></p>
+      </article>
+
+      <article>
+        <img src="https://images.unsplash.com/photo-1590080875837-20ff11a844c9" alt="Starlight Smoothie">
+        <h3>Starlight Smoothie</h3>
+        <p>A refreshing blend of blueberries, bananas, and stardust honey. <em>$6.99</em></p>
+      </article>
+    </section>
+
+    <section id="order-form">
+      <h2>Place Your Order</h2>
+      <form>
+        <label for="burger-qty">Galaxy Burger (Qty):</label>
+        <input type="number" id="burger-qty" name="burger-qty" min="0" value="0">
+
+        <label for="fries-qty">Meteor Fries (Qty):</label>
+        <input type="number" id="fries-qty" name="fries-qty" min="0" value="0">
+
+        <label for="smoothie-qty">Starlight Smoothie (Qty):</label>
+        <input type="number" id="smoothie-qty" name="smoothie-qty" min="0" value="0">
+
+        <fieldset>
+          <legend>Add-ons</legend>
+          <label><input type="checkbox" name="addon" value="extra cheese"> Extra Cheese</label><br>
+          <label><input type="checkbox" name="addon" value="bacon"> Bacon</label><br>
+          <label><input type="checkbox" name="addon" value="avocado"> Avocado</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Choose a Side</legend>
+          <label><input type="radio" name="side" value="fries"> Fries</label><br>
+          <label><input type="radio" name="side" value="salad"> Salad</label><br>
+          <label><input type="radio" name="side" value="none" checked> None</label>
+        </fieldset>
+
+        <label for="special-requests">Special Requests:</label>
+        <textarea id="special-requests" name="special-requests" rows="4" placeholder="Let us know if you have any special requests..."></textarea>
+
+        <input type="submit" value="Go To Checkout">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with love by <strong>astrodev</strong></p>
+  </footer>
+</body>
+</html>
